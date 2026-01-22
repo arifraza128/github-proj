@@ -1,4 +1,4 @@
-name: Deploy HTML Site to S3
+name: Deploy HTML CSS JS to S3
 
 on:
   push:
@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Upload files to S3
+      - name: Upload website to S3
         uses: jakejarvis/s3-sync-action@v0.5.1
         with:
           args: --delete
